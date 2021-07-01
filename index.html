@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ========== Swiper Css ========== -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <!-- ========== Style Css ========== -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Mobile App</title>
+</head>
+<body>
+    <!-- ========== Header ========== -->
+    <header class="header">
+        <div class="header__container container">
+            <div class="header__logo">
+                <h2>Mobile App</h2>
+            </div>
+            <ul class="header__menu" id="header-menu">
+                <li><a href="#home" class="header__links link-activo">Home</a></li>
+                <li><a href="#features" class="header__links">Features</a></li>
+                <li><a href="#screenshots" class="header__links">Screenshots</a></li>
+                <li><a href="#testimonials" class="header__links">Testimonials</a></li>
+                <li><a href="#pricing" class="header__links">Pricing</a></li>
+                <li><a href="#contact" class="header__links">Contact</a></li>
+            </ul>
+            <button class="header__button" id="header-button"><i class="fas fa-bars"></i></button>                
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- ========== Home ========== -->
+        <section class="home section" id="home">
+            <div class="home__container grid">
+                <div class="home__content">
+                    <h1 class="home__title">Best Mobile App Template for your Business</h1>
+                    <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quo recusandae corporis qui, impedit consequatur suscipit tempore pariatur incidunt dignissimos?</div>
+                    <button class="home__button button">Download App</button>
+                </div>
+                <div class="phone">
+                    <img src="img/app-screenshots/1.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== Features ========== -->
+        <section class="features section" id="features">
+            <h3 class="section-title">Awesome <span class="high">Features</span></h3>
+            <div class="features__container swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="features__card swiper-slide">
+                        <i class="icon fas fa-code"></i>
+                        <h3 class="features__title">Clean Code</h3>
+                        <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus maiores ullam eos.</p>
+                    </div>
+                    <div class="features__card swiper-slide">
+                        <i class="icon far fa-edit"></i>
+                        <h3 class="features__title">Auto Install System</h3>
+                        <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus maiores ullam eos.</p>
+                    </div>
+                    <div class="features__card swiper-slide">
+                        <i class="icon fas fa-paint-brush"></i>
+                        <h3 class="features__title">Pixel Perfect Design</h3>
+                        <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus maiores ullam eos.</p>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <!-- ========== Facts ========== -->
+        <section class="facts section">
+            <div class="facts__container grid">
+                <div class="phone">
+                    <img src="img/app-screenshots/2.png" alt="">
+                </div>
+                <div class="facts__content">
+                    <h3 class="facts__title section-title">Fun <span class="high">Facts</span></h3>
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates facilis laudantium natus dicta quos excepturi impedit animi? Cupiditate, dolorem laborum.</p>
+                    <div class="facts__row grid">
+                        <div class="facts__card card-1">
+                            <h3 class="section__title">4000</h3>
+                            <p class="description">Downloads</p>
+                        </div>
+                        <div class="facts__card card-2">
+                            <h3 class="section__title">2500</h3>
+                            <p class="description">Likes</p>
+                        </div>
+                        <div class="facts__card card-3">
+                            <h3 class="section__title">500</h3>
+                            <p class="description">5 start ratings</p>
+                        </div>
+                        <div class="facts__card card-4">
+                            <h3 class="section__title">150</h3>
+                            <p class="description">Awars</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== Screenshots ========== -->
+        <section class="screenshots section" id="screenshots">
+            <h3 class="section-title">App <span class="high">Screenshots</span></h3>
+            <div class="screenshots__container swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="screenshots__card swiper-slide">
+                        <img src="img/app-screenshots/1.png" alt="">
+                    </div>
+                    <div class="screenshots__card swiper-slide">
+                        <img src="img/app-screenshots/2.png" alt="">
+                    </div>
+                    <div class="screenshots__card swiper-slide">
+                        <img src="img/app-screenshots/3.png" alt="">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========== App ========== -->
+    <section class="app section">
+        <h3 class="section-title">Download <span class="high">App</span></h3>
+        <div class="app__container grid">
+            <div class="app__card">
+                <i class="icon fab fa-google-play"></i>
+                <h3 class="app__title">Google Play</h3>
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, animi.</p>
+                <button class="button">Download</button>
+            </div>
+            <div class="app__card">
+                <i class="icon fab fa-apple"></i>
+                <h3 class="app__title">Apple Store</h3>
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, animi.</p>
+                <button class="button">Download</button>
+            </div>
+            <div class="app__card">
+                <i class="icon fab fa-windows"></i>
+                <h3 class="app__title">Microsoft Store</h3>
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, animi.</p>
+                <button class="button">Download</button>
+            </div>
+        </div>
+        <div class="filter"></div>
+    </section>
+    
+    <main class="container">
+
+        <!-- ========== Work ========== -->
+        <section class="work section">
+            <h3 class="section-title">How It <span class="high">Works</span></h3>
+            <div class="work__container">
+                <div class="work__card">
+                    <div class="work__item button">1</div>
+                    <div class="line"></div>
+                    <div class="work__title">Download App</div>
+                    <div class="description">Lorem ipsum dolor sit amet consectetur</div>
+                </div>
+                <div class="work__card">
+                    <div class="work__item button">2</div>
+                    <div class="line"></div>
+                    <div class="work__title">Create Profile</div>
+                    <div class="description">Lorem ipsum dolor sit amet consectetur</div>
+                </div>
+                <div class="work__card">
+                    <div class="work__item button">3</div>
+                    <div class="line"></div>
+                    <div class="work__title">Search Product</div>
+                    <div class="description">Lorem ipsum dolor sit amet consectetur</div>
+                </div>
+                <div class="work__card">
+                    <div class="button">4</div>
+                    <div class="work__title">Order Product</div>
+                    <div class="description">Lorem ipsum dolor sit amet consectetur</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== Testimonials ========== -->
+        <section class="testimonials section" id="testimonials">
+            <h3 class="section-title">What Our <span class="high">Client</span> Say</h3>
+            <div class="testimonials__container swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="testimonials__card swiper-slide">
+                        <img src="img/testimonial/1.jpg" alt="" class="testimonials__img">
+                        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi ex magnam culpa.</p>
+                        <h3 class="testimonials__title">Jhon May</h3>
+                        <h4 class="description">UI Designer</h4>
+                        <div class="testimonials__star">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="testimonials__card swiper-slide">
+                        <img src="img/testimonial/2.jpg" alt="" class="testimonials__img">
+                        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi ex magnam culpa.</p>
+                        <h3 class="testimonials__title">Emma Conelly</h3>
+                        <h4 class="description">UI Designer</h4>
+                        <div class="testimonials__star">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="testimonials__card swiper-slide">
+                        <img src="img/testimonial/3.jpg" alt="" class="testimonials__img">
+                        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi ex magnam culpa.</p>
+                        <h3 class="testimonials__title">Stuart Harris</h3>
+                        <h4 class="description">UI Designer</h4>
+                        <div class="testimonials__star">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="testimonials__card swiper-slide">
+                        <img src="img/testimonial/4.jpg" alt="" class="testimonials__img">
+                        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi ex magnam culpa.</p>
+                        <h3 class="testimonials__title">Grace Wallace</h3>
+                        <h4 class="description">UI Designer</h4>
+                        <div class="testimonials__star">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <!-- ========== Pricing ========== -->
+        <section class="pricing section" id="pricing">
+            <h3 class="section-title">Pricing <span class="high">Plan</span></h3>
+            <div class="pricing__container grid">
+                <div class="pricing__card">
+                    <h3>basic</h3>
+                    <h4 class="pricing__high">99 <span class="month">/Montly</span></h4>
+                    <div class="pricing__rules">
+                        <h4 class="description"><i class="pricing__check fas fa-check"></i>Lorem, ipsum dolor.</h4>
+                        <h4 class="description"><i class="pricing__check fas fa-check"></i>Lorem, ipsum.</h4>
+                        <h4 class="description"><i class="pricing__check fas fa-check"></i>Lorem ipsum dolor sit.</h4>
+                        <h4 class="description"><i class="pricing__check fas fa-check"></i>Lorem, ipsum dolor.</h4>
+                    </div>
+                    <button class="button">Get Started</button>
+                </div>
+                <div class="pricing__card">
+                    <h3>Premium</h3>
+                    <h4 class="pricing__high">149 <span class="month">/Montly</span></h4>
+                    <div class="pricing__rules">
+                        <h4 class="description"><i class="pricing__check fas fa-check"></i>Lorem, ipsum dolor.</h4>
+                        <h4 class="description"><i class="pricing__check fas fa-check"></i>Lorem, ipsum.</h4>
+                        <h4 class="description"><i class="pricing__check fas fa-check"></i>Lorem ipsum dolor sit.</h4>
+                        <h4 class="description"><i class="pricing__check fas fa-check"></i>Lorem, ipsum dolor.</h4>
+                    </div>
+                    <button class="button">Get Started</button>
+                </div>
+                <div class="pricing__card">
+                    <h3>Ultimate</h3>
+                    <h4 class="pricing__high">199 <span class="month">/Montly</span></h4>
+                    <div class="pricing__rules">
+                        <h4 class="description"><i class="pricing__check fas fa-check"></i>Lorem, ipsum dolor.</h4>
+                        <h4 class="description"><i class="pricing__check fas fa-check"></i>Lorem, ipsum.</h4>
+                        <h4 class="description"><i class="pricing__check fas fa-check"></i>Lorem ipsum dolor sit.</h4>
+                        <h4 class="description"><i class="pricing__check fas fa-check"></i>Lorem, ipsum dolor.</h4>
+                    </div>
+                    <button class="button">Get Started</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- ========== Member ========== -->
+    <section class="member section">
+        <h3 class="section-title">Team <span class="high">Member</span></h3>
+        <div class="member__container swiper-container">
+            <div class="swiper-wrapper">
+                <div class="member__card swiper-slide">
+                    <img src="img/team/1.jpg" alt="">
+                    <div class="member__content">
+                        <h3 class="member__title">Nara Rez</h3>
+                        <p class="description">UI Design</p>
+                    </div>
+                </div>
+                <div class="member__card swiper-slide">
+                    <img src="img/team/2.jpg" alt="">
+                    <div class="member__content">
+                        <h3 class="member__title">Emma Conelly</h3>
+                        <p class="description">UI Design</p>
+                    </div>
+                </div>
+                <div class="member__card swiper-slide">
+                    <img src="img/team/3.jpg" alt="">
+                    <div class="member__content">
+                        <h3 class="member__title">Stuart Harris</h3>
+                        <p class="description">UI Design</p>
+                    </div>
+                </div>
+                <div class="member__card swiper-slide">
+                    <img src="img/team/4.jpg" alt="">
+                    <div class="member__content">
+                        <h3 class="member__title">Jhon May</h3>
+                        <p class="description">UI Design</p>
+                    </div>
+                </div>
+                <div class="member__card swiper-slide">
+                    <img src="img/team/5.jpg" alt="">
+                    <div class="member__content">
+                        <h3 class="member__title">Grace Wallace</h3>
+                        <p class="description">UI Design</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+    
+    <!-- ========== Font Awesome ========== -->
+    <script src='https://kit.fontawesome.com/e76250a593.js' crossorigin='anonymous'></script>
+    <!-- ========== Swiper JS ========== -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <!-- ========== Menu ========== -->
+    <script src="js/menu.js"></script>
+    <!-- ========== Features ========== -->
+    <script src="js/features.js"></script>
+    <!-- ========== Screenshots ========== -->
+    <script src="js/screenshots.js"></script>
+    <!-- ========== Testimonials ========== -->
+    <script src="js/testimonials.js"></script>
+    <!-- ========== Member ========== -->
+    <script src="js/member.js"></script>
+</body>
+</html>

@@ -1,0 +1,444 @@
+/* @import url('https: //fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap'); */
+
+:root {
+    /*========== Header ==========*/
+    --header-height: 3em;
+    /*========== Colors ==========*/
+    --first-color: #7857FE;
+    --first-color-alt: ;
+    --first-color-send: ;
+    --title-color: #fff;
+    --text-color: #fff;
+    --text-color-light: #959494;
+    --body-color: #2B2C2F;
+    /*========== Font and typography ==========*/
+    --body-font: 'Poppins', sans-serif;
+    --h2-font-size: 1.25em;
+    --h3-font-size: 1.125em;
+    --small-font-size: .8em;
+    --normal-font-size: 1em;
+    --biggest-font-size: 1.5em;
+    /*========== Font weight ==========*/
+    --font-semi-bold: 600;
+    --font-bold: 700;
+    /*========== Margenes ==========*/
+    --mb-1: .5em;
+    --mb-2: 1em;
+    --mb-3: 1.5em;
+    --mb-4: 2em;
+    --mb-5: 2.5em;
+    --mb-6: 3em;
+    /*========== Transition ==========*/
+    --transition-slow: 1000ms ease all;
+    --transition-normal: 300ms ease all;
+    /*========== z index ==========*/
+    --z-fixed: 100;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*========== GENERAL STYLES ==========*/
+
+body {
+    margin-top: var(--header-height);
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background: var(--body-color);
+    color: var(--text-color);
+}
+
+h1,h2,h3 {
+    font-weight: var(--font-semi-bold);
+    color: var(--title-color);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+/*========== CLASS CSS ==========*/
+
+.section {
+    padding: 4rem 0 2rem 0;
+}
+
+.section-title {
+    font-size: var(--biggest-font-size);
+    color: var(--title-color);
+    margin-bottom: var(--mb-5);
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.high {
+    color: var(--first-color);
+}
+
+.description {
+    font-size: var(--small-font-size);
+    margin-bottom: var(--mb-3);
+    color: var(--text-color-light);
+}
+
+.icon {
+    color: var(--first-color);
+}
+
+.filter {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.8);
+    top: 0;
+}
+
+.container {
+    max-width: 1200px;
+    width: 80%;
+    margin: auto;
+}
+
+.grid {
+    display: grid;
+    gap: var(--mb-3);
+}
+
+.button {
+    display: inline-block;
+    background: var(--first-color);
+    font-size: var(--normal-font-size);
+    color: var(--text-color);
+    border: none;
+    padding: .7em 1em;
+    border-radius: 20px;
+    outline: none;
+    font-weight: var(--font-bold);
+    cursor: pointer;
+}
+
+.phone {
+    max-width: 250px;
+    width: 100%;
+    justify-self: center;
+}
+
+/*========== HEADER ==========*/
+
+.header {
+    width: 100%;
+    min-height: var(--header-height);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background: var(--body-color);
+    display: flex;
+    align-items: center;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    font-size: var(--small-font-size);
+}
+
+.header__menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header__links {
+    display: inline-block;
+    color: var(--text-color);
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-semi-bold);
+    padding: .5em 1em;
+    border-bottom: 2px solid transparent;
+    margin-bottom: var(--mb-1);
+}
+
+.header__links.link-activo {
+    border-bottom: 2px solid var(--text-color);
+}
+
+.header__button {
+    display: none;
+    background: none;
+    border: none;
+    padding: 1em;
+    font-size: var(--normal-font-size);
+    color: var(--text-color);
+    outline: none;
+    cursor: pointer;
+}
+
+/*========== HOME ==========*/
+
+.home__container {
+    grid-template-columns: 4fr 1fr;
+    align-items: center;
+}
+
+.home__content {
+    width: 80%;
+}
+
+.home__title {
+    font-size: var(--biggest-font-size);
+    margin-bottom: var(--mb-1);
+}
+
+/*========== FEATURES ==========*/
+
+.features__card {
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,.3);
+    padding: 1em;
+}
+
+.features__title {
+    font-size: var(--normal-font-size);
+    margin: var(--mb-3) 0 var(--mb-2);
+}
+
+.swiper-wrapper {
+    margin-bottom: var(--mb-6);
+}
+
+.swiper-pagination-bullet {
+    background: var(--first-color);
+    width: .8em;
+    height: .3em;
+    border-radius: 0;
+  }
+
+/*========== FACTS ==========*/
+
+.facts__container {
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    text-align: center;
+}
+
+.facts__title {
+    margin-bottom: var(--mb-2);
+}
+
+.facts__row {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.facts__card {
+    padding: 1em 1em 0;
+    text-align: center;
+    border-bottom: 10px;
+}
+
+.facts__card .description {
+    color: #fff;
+}
+
+.card-1 {background: #E91E63;}
+.card-2 {background: #f5ae10;}
+.card-3 {background: #09D69C;}
+.card-4 {background: #7857FE;}
+
+/*========== APP ==========*/
+
+.app {
+    background-image: url(../img/download-app-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.app__container {
+    position: relative;
+    z-index: 10;
+    max-width: 1200px;
+    width: 80%;
+    margin: auto;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));    
+}
+
+.app__card {
+    padding: 1em 0;
+    text-align: center;
+    box-shadow: 20px 5px 35px rgba(0,0,0,.9);
+}
+
+.app__title {
+    font-size: var(--normal-font-size);
+    margin: 1em;
+}
+
+/*========== WORK ==========*/
+
+.work__container {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.work__item {
+    position: relative;
+    z-index: 10;
+}
+
+.line{
+    width: 100%;
+    height: 2px;
+    background: var(--first-color);
+    transform: translate(50%, -20px);
+}
+
+.work__title {
+    font-size: var(--small-font-size);
+    margin: 1em;
+}
+
+/*========== TESTIMONIALS ==========*/
+
+.testimonials__card {
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,.3);
+    padding: 0 2em;
+}
+
+.testimonials__img {
+    max-width: 80px;
+    border-radius: 50%;
+    margin-bottom: var(--mb-2);
+}
+
+.testimonials__title {
+    margin-bottom: var(--mb-2);
+    font-size: var(--normal-font-size);
+}
+
+.testimonials__star {
+    color: #ffff00;
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--mb-4);
+}
+
+/*========== PRICING ==========*/
+
+.pricing__container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));    
+}
+
+.pricing__card {
+    box-shadow: 0 5px 15px rgba(0,0,0,.3);
+    text-align: center;
+    padding: 2em 1em;
+}
+
+.pricing__rules {
+    margin-bottom: var(--mb-4);
+}
+
+.pricing__check {
+    color: var(--first-color);
+    margin-right: var(--mb-1);
+}
+
+.pricing__high {
+    font-size: 2em;
+    color: var(--first-color);
+    margin: var(--mb-2);
+}
+
+.month {
+    font-size: .5em;
+    color: var(--text-color-light);
+    text-align: end;
+}
+
+/*========== MEMBER ==========*/
+
+.member {
+    max-width: 800px;
+    width: 60%;
+    margin: auto;
+}
+
+.member__card {
+    position: relative;
+    text-align: center;
+}
+
+.member__content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0,0,0,.8);
+}
+
+.member__title {
+    margin: var(--mb-1);
+}
+
+/*==========  ==========*/
+
+/*========== MEDIA QUERRY ==========*/
+@media screen and (max-width: 950px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    .header__button {
+        display: block;
+    }
+    
+    .header__menu {
+        position: absolute;
+        top: var(--header-height);
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: var(--body-color);
+        transition: var(--transition-normal);
+        overflow: hidden;
+    }
+
+    .header__menu.menu-activo {
+        height: max-content;
+    }
+
+    .home__content {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    body {
+        font-size: 12px;
+    }
+
+}
