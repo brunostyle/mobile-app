@@ -43,6 +43,10 @@
 
 /*========== GENERAL STYLES ==========*/
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin-top: var(--header-height);
     font-family: var(--body-font);
@@ -112,6 +116,12 @@ img {
     margin: auto;
 }
 
+.container-small {
+    max-width: 800px;
+    width: 60%;
+    margin: auto;
+}
+
 .grid {
     display: grid;
     gap: var(--mb-3);
@@ -148,6 +158,7 @@ img {
     background: var(--body-color);
     display: flex;
     align-items: center;
+    padding: .5em 0;
 }
 
 .header__container {
@@ -173,12 +184,12 @@ img {
     font-size: var(--normal-font-size);
     font-weight: var(--font-semi-bold);
     padding: .5em 1em;
-    border-bottom: 2px solid transparent;
+    border-radius: 10px;
     margin-bottom: var(--mb-1);
 }
 
 .header__links.link-activo {
-    border-bottom: 2px solid var(--text-color);
+    background: var(--first-color);
 }
 
 .header__button {
@@ -186,7 +197,7 @@ img {
     background: none;
     border: none;
     padding: 1em;
-    font-size: var(--normal-font-size);
+    font-size: 1.2em;
     color: var(--text-color);
     outline: none;
     cursor: pointer;
@@ -380,12 +391,6 @@ img {
 
 /*========== MEMBER ==========*/
 
-.member {
-    max-width: 800px;
-    width: 60%;
-    margin: auto;
-}
-
 .member__card {
     position: relative;
     text-align: center;
@@ -402,7 +407,92 @@ img {
     margin: var(--mb-1);
 }
 
-/*==========  ==========*/
+/*========== CONTACT ==========*/
+
+.contact__container {
+    grid-template-areas: "contact__location contact__send contact__send";
+}
+
+.contact__location {
+    grid-area: "contact__location";
+    justify-self: center;
+}
+
+.contact__send {
+    grid-area: "contact__send";
+    text-align: center;
+}
+
+.contact__item {
+    margin: var(--mb-3);
+    display: flex;
+    align-items: center;
+    gap: var(--mb-3);
+}
+
+.contact__item .description {
+    margin-bottom: 0;
+}
+
+.contact__icon {
+    font-size: var(--small-font-size);
+    color: var(--first-color);
+    border-radius: 50%;
+    padding: 1em;
+    border: 1px solid var(--first-color);
+}
+
+.contact__dates {
+    display: flex;
+    gap: var(--mb-2);
+}
+
+.contact__input {
+    width: 100%;
+    height: 2.5em;
+    border: none;
+    background: none;
+    padding: .5em 1em;
+    margin-bottom: var(--mb-2);
+    border-radius: 5px;
+    color: var(--text-color);
+    box-shadow: 0 5px 15px rgba(0,0,0,.3);
+    outline: none;
+}
+
+.contact__textarea  {
+    min-height: 8em;
+}
+
+/*========== FOOTER ==========*/
+
+.footer {
+    background: var(--first-color);
+    padding: 2em 0 1em;
+}
+
+.footer__container {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.footer__container > div {
+    text-align: center;
+}
+
+.footer__title {
+    margin-bottom: var(--mb-3);
+}
+
+.footer__description {
+    display: block;
+    font-size: var(--small-font-size);
+    margin-bottom: var(--mb-3);
+    color: var(--text-color);
+}
+
+.description-center {
+    text-align: center;
+}
 
 /*========== MEDIA QUERRY ==========*/
 @media screen and (max-width: 950px) {
@@ -417,7 +507,7 @@ img {
     
     .header__menu {
         position: absolute;
-        top: var(--header-height);
+        top: calc(var(--header-height) + .5em);
         left: 0;
         width: 100%;
         height: 0;
@@ -435,10 +525,21 @@ img {
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
+    
+    body {
+        font-size: 13px;
+    }
 
+    .contact__container {
+        grid-template-columns: 1fr;
+        grid-template-areas: "contact__location"
+                             "contact__send" ;
+    }
+}
+
+@media screen and (max-width: 500px) {
     body {
         font-size: 12px;
     }
-
 }
