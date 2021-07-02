@@ -5,6 +5,7 @@ let btnMenu = document.getElementById('header-button'),
 
 btnMenu.addEventListener('click', () => {
     menu.classList.toggle('menu-activo');
+    btnMenu.classList.toggle('menu-active');
 });
 
 let botones = document.querySelectorAll('.header__menu a');
