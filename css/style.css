@@ -5,7 +5,7 @@
     --header-height: 3em;
     /*========== Colors ==========*/
     --first-color: #7857FE;
-    --first-color-alt: ;
+    --first-color-alt: #4040d6;
     --first-color-send: ;
     --title-color: #fff;
     --text-color: #fff;
@@ -31,6 +31,10 @@
     /*========== Transition ==========*/
     --transition-slow: 1000ms ease all;
     --transition-normal: 300ms ease all;
+    /*========== Box shadow ==========*/
+    --shadow: 0 5px 15px rgba(0,0,0,.3);
+    /*========== Filter ==========*/
+    --filter: rgba(0,0,0,.8);
     /*========== z index ==========*/
     --z-fixed: 100;
 }
@@ -39,6 +43,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 /*========== GENERAL STYLES ==========*/
@@ -73,6 +78,28 @@ img {
     height: 100%;
 }
 
+/*========== Variables Light theme ==========*/
+
+body.light-theme {
+    --first-color: #7857FE;
+    --first-color-alt: #4040d6;
+    --first-color-send: ;
+    --title-color: #000;
+    --text-color: #fff;
+    --text-color-light: #3a3a3a;
+    --body-color: #FEFBFB;
+    --filter: rgba(120, 87, 254, .8);
+}
+
+.change-theme {
+    cursor: pointer;
+    transition: var(--transition-normal);
+}
+
+.change-theme:hover {
+    transform: scale(1.1);
+}
+
 /*========== CLASS CSS ==========*/
 
 .section {
@@ -96,6 +123,7 @@ img {
     font-size: var(--small-font-size);
     margin-bottom: var(--mb-3);
     color: var(--text-color-light);
+    font-weight: var(--font-bold);
 }
 
 .icon {
@@ -106,7 +134,7 @@ img {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,.8);
+    background: var(--filter);
     top: 0;
 }
 
@@ -138,6 +166,11 @@ img {
     outline: none;
     font-weight: var(--font-bold);
     cursor: pointer;
+    transition: var(--transition-normal);
+}
+
+.button:hover {
+    background: var(--first-color-alt);
 }
 
 .phone {
@@ -161,6 +194,10 @@ img {
     padding: .5em 0;
 }
 
+body.light-theme .header {
+    background: var(--first-color);
+}
+
 .header__container {
     display: flex;
     justify-content: space-between;
@@ -168,7 +205,7 @@ img {
 }
 
 .header__logo {
-    font-size: var(--small-font-size);
+    font-size: var(--normal-font-size);
 }
 
 .header__menu {
@@ -192,6 +229,11 @@ img {
     background: var(--first-color);
 }
 
+body.light-theme .header__links.link-activo {
+    background: #fff;
+    color: var(--first-color);
+}
+
 .header__button {
     display: none;
     background: none;
@@ -205,6 +247,14 @@ img {
 
 /*========== HOME ==========*/
 
+.home {
+    clip-path: polygon(100% 0, 100% 100%, 82% 100%, 0 90%, 0 0);
+}
+
+body.light-theme .home {
+    background: var(--first-color);
+}
+
 .home__container {
     grid-template-columns: 4fr 1fr;
     align-items: center;
@@ -212,18 +262,46 @@ img {
 
 .home__content {
     width: 80%;
+    color: ;
 }
 
 .home__title {
     font-size: var(--biggest-font-size);
     margin-bottom: var(--mb-1);
+    color: var(--text-color);
+}
+
+.home__description {
+    color: var(--text-color);
+}
+
+.home__button {
+    background: #fff;
+    color: #000;
+}
+
+.home__button:hover {
+    color: var(--text-color);
+}
+
+.home__cell {
+    /* animation: down-up 1s linear alternate infinite; */
+}
+
+@keyframes down-up {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(20px);
+    }
 }
 
 /*========== FEATURES ==========*/
 
 .features__card {
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,.3);
+    box-shadow: var(--shadow);
     padding: 1em;
 }
 
@@ -265,7 +343,8 @@ img {
     border-bottom: 10px;
 }
 
-.facts__card .description {
+.facts__card .description,
+.facts__card .section__title {
     color: #fff;
 }
 
@@ -293,9 +372,11 @@ img {
 }
 
 .app__card {
-    padding: 1em 0;
+    padding: 1em;
     text-align: center;
-    box-shadow: 20px 5px 35px rgba(0,0,0,.9);
+    box-shadow: var(--shadow);
+    background: var(--body-color);
+    border-radius: 20px;
 }
 
 .app__title {
@@ -328,13 +409,14 @@ img {
 .work__title {
     font-size: var(--small-font-size);
     margin: 1em;
+    color: var(--title-color);
 }
 
 /*========== TESTIMONIALS ==========*/
 
 .testimonials__card {
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,.3);
+    box-shadow: var(--shadow);
     padding: 0 2em;
 }
 
@@ -363,7 +445,7 @@ img {
 }
 
 .pricing__card {
-    box-shadow: 0 5px 15px rgba(0,0,0,.3);
+    box-shadow: var(--shadow);
     text-align: center;
     padding: 2em 1em;
 }
@@ -405,6 +487,11 @@ img {
 
 .member__title {
     margin: var(--mb-1);
+    color: var(--text-color);
+}
+
+.member__content .description {
+    color: var(--text-color);
 }
 
 /*========== CONTACT ==========*/
@@ -421,6 +508,10 @@ img {
 .contact__send {
     grid-area: "contact__send";
     text-align: center;
+}
+
+.contact__title {
+    color: var(--title-color);
 }
 
 .contact__item {
@@ -456,7 +547,7 @@ img {
     margin-bottom: var(--mb-2);
     border-radius: 5px;
     color: var(--text-color);
-    box-shadow: 0 5px 15px rgba(0,0,0,.3);
+    box-shadow: var(--shadow);
     outline: none;
 }
 
@@ -481,6 +572,7 @@ img {
 
 .footer__title {
     margin-bottom: var(--mb-3);
+    color: var(--text-color);
 }
 
 .footer__description {
@@ -514,6 +606,10 @@ img {
         background: var(--body-color);
         transition: var(--transition-normal);
         overflow: hidden;
+    }
+
+    body.light-theme .header__menu {
+        background: var(--first-color);
     }
 
     .header__menu.menu-activo {
