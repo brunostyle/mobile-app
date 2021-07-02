@@ -1,5 +1,5 @@
 let swiper2 = new Swiper('.screenshots__container', {
-  slidesPerView: 3,
+  slidesPerView: 2,
   grabCursor: true,
   /* autoplay: true, */
   spaceBetween: 20,
@@ -9,7 +9,7 @@ let swiper2 = new Swiper('.screenshots__container', {
       slidesPerView: 3,
     },
     800: {
-      slidesPerView: 6
+      slidesPerView: 4
     }
     
   },
