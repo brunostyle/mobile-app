@@ -9,6 +9,7 @@
     --first-color-send: ;
     --title-color: #fff;
     --text-color: #fff;
+    --description-color: #959494;
     --text-color-light: #959494;
     --body-color: #2B2C2F;
     /*========== Font and typography ==========*/
@@ -86,7 +87,8 @@ body.light-theme {
     --first-color-send: ;
     --title-color: #000;
     --text-color: #fff;
-    --text-color-light: #3a3a3a;
+    --description-color: #000;
+    --text-color-light: #959494;
     --body-color: #FEFBFB;
     --filter: rgba(120, 87, 254, .8);
 }
@@ -122,7 +124,7 @@ body.light-theme {
 .description {
     font-size: var(--small-font-size);
     margin-bottom: var(--mb-3);
-    color: var(--text-color-light);
+    color: var(--description-color);
     font-weight: var(--font-bold);
 }
 
