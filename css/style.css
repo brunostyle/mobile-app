@@ -519,6 +519,10 @@ body.light-theme .home {
     margin-bottom: 0;
 }
 
+.contact__location .title {
+    text-align: center;
+}
+
 .contact__icon {
     font-size: var(--small-font-size);
     color: var(--first-color);
