@@ -1,7 +1,7 @@
 let swiper1 = new Swiper('.features__container', {
   slidesPerView: 1,
   grabCursor: true,
-  /* autoplay: true, */
+  autoplay: true,
   spaceBetween: 20,
   loop: true,
   breakpoints: {

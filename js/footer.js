@@ -1,4 +1,4 @@
-let swiper3 = new Swiper('.testimonials__container', {
+let swiper5 = new Swiper('.footer__container', {
     slidesPerView: 1,
     grabCursor: true,
     autoplay: true,
@@ -12,9 +12,5 @@ let swiper3 = new Swiper('.testimonials__container', {
         slidesPerView: 3
       }
       
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
     }
 });

@@ -17,6 +17,7 @@ botones.forEach((elemento) => {
         });
         elemento.classList.add('link-activo');
         menu.classList.remove('menu-activo');
+        btnMenu.classList.toggle('menu-active');
     })
 });
 
